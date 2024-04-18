@@ -32,5 +32,5 @@ Now that you're set up, you're ready to start the quest! Follow the steps as out
 
 ## Preview of Voting dApp
 
-![image](https://github.com/Aelf-Dev-Centre/Developer_DAO/assets/Developer_DAO_Landing_Page.jpg)
+![image](https://github.com/Aelf-Dev-Centre/Developer_DAO/blob/main/assets/Developer_DAO_Landing_Page.jpg)
 
