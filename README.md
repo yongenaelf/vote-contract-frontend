@@ -20,7 +20,7 @@ git clone https://github.com/Aelf-Dev-Centre/Developer_DAO.git
 
 2. Navigate to the project directory:
 ```bash
-cd StackUp_DAO
+cd Developer_DAO
 ```
 
 3. Install the necessary dependencies & libraries
