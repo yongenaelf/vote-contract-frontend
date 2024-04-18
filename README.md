@@ -32,5 +32,5 @@ Now that you're set up, you're ready to start the quest! Follow the steps as out
 
 ## Preview of Voting dApp
 
-![image](https://github.com/clement-stackup/StackUp_DAO/assets/120361535/54938880-5767-4510-8601-b83be6328631)
+![image](https://github.com/Aelf-Dev-Centre/Developer_DAO/assets/Developer_DAO_Landing_Page.jpg)
 
