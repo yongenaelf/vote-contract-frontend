@@ -15,7 +15,7 @@ Before you begin, do ensure you have the following installed on your system:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/clement-stackup/StackUp_DAO.git
+git clone https://github.com/Aelf-Dev-Centre/Developer_DAO.git
 ```
 
 2. Navigate to the project directory:
