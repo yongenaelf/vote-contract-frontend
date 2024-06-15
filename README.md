@@ -1,8 +1,8 @@
-# Quest 5 - Build a Voting dApp (Frontend) 
+# Build a Voting dApp (Frontend) 
 
 ## Getting Started
 
-Welcome to the finale quest of the campaign where we will build the frontend components of our Voting dApp!
+Frontend of our [Voting dApp](https://learn.aelf.dev/docs/tutorial/stackup/frontend/).
 
 ## Pre-requisites
 
@@ -15,12 +15,12 @@ Before you begin, do ensure you have the following installed on your system:
 
 1. Clone the repository
 ```bash
-git clone https://github.com/Aelf-Dev-Centre/Developer_DAO.git
+git clone https://github.com/AElfProject/vote-contract-frontend.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd Developer_DAO
+cd vote-contract-frontend
 ```
 
 3. Install the necessary dependencies & libraries
@@ -32,5 +32,5 @@ Now that you're set up, you're ready to start the quest! Follow the steps as out
 
 ## Preview of Voting dApp
 
-![image](https://github.com/Aelf-Dev-Centre/Developer_DAO/blob/main/assets/Developer_DAO_Landing_Page.jpg)
+![image](assets/Developer_DAO_Landing_Page.jpg)
 
