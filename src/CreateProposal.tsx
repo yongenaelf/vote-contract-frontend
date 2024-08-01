@@ -2,14 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { IPortkeyProvider, MethodsBase } from "@portkey/provider-types";
+import { IPortkeyProvider } from "@portkey/provider-types";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -36,8 +35,6 @@ const formSchema = z.object({
 
 export default function CreateProposal() {
   const [provider, setProvider] = useState<IPortkeyProvider | null>(null);
-  const [createProposalInput, setCreateProposalInput] =
-    useState<IProposalInput>();
   const DAOContract = useDAOSmartContract(provider);
 
   const navigate = useNavigate();
@@ -62,10 +59,42 @@ export default function CreateProposal() {
   }, [provider]);
 
   //Step D - Configure Proposal Form
-  const form = useForm<z.infer<typeof formSchema>>({});
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      address: currentWalletAddress,
+      title: "",
+      description: "",
+      voteThreshold: 0,
+    },
+  });
 
-  //Step E - Write Create Proposal Logic
-  function onSubmit(values: z.infer<typeof formSchema>) {}
+  // Step E - Write Create Proposal Logic
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    const proposalInput: IProposalInput = {
+      creator: currentWalletAddress,
+      title: values.title,
+      description: values.description,
+      voteThreshold: values.voteThreshold,
+    };
+
+    const createNewProposal = async () => {
+      try {
+        await DAOContract?.callSendMethod(
+          "CreateProposal",
+          currentWalletAddress,
+          proposalInput
+        );
+
+        navigate("/");
+        alert("Successfully created proposal");
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    createNewProposal();
+  }
 
   return (
     <div className="form-wrapper">
